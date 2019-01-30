@@ -305,3 +305,4 @@ $RECYCLE.BIN/
 
 # End of https://www.gitignore.io/api/git,osx,node,sass,linux,macos,windows,angular,webstorm,visualstudiocode
 *app.component.css
+linters
