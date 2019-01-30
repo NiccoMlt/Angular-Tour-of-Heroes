@@ -1,5 +1,7 @@
 # MyApp
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b0bbd903bc7b495b80c534c555d7566b)](https://app.codacy.com/app/NiccoMlt/Angular-Tour-of-Heroes?utm_source=github.com&utm_medium=referral&utm_content=NiccoMlt/Angular-Tour-of-Heroes&utm_campaign=Badge_Grade_Settings)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.3.
 
 ## Development server
