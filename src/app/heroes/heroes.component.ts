@@ -40,6 +40,11 @@ export class HeroesComponent implements OnInit { // Always export the component 
             })
     }
 
+    delete(hero: Hero): void {
+        this.heroes = this.heroes.filter(h => h !== hero)
+        this.heroService.deleteHero(hero).subscribe()
+    }
+
     private getHeroes() {
         this.heroService
             .getHeroes()
