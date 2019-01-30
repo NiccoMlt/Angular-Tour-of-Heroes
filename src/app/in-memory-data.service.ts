@@ -8,7 +8,7 @@ import {HEROES} from './mock-heroes'
 })
 export class InMemoryDataService implements InMemoryDbService {
     createDb() {
-        return HEROES
+        return {heroes: HEROES}
     }
 
     // Overrides the genId method to ensure that a hero always has an id.
