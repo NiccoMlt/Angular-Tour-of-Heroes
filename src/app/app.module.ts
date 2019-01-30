@@ -5,16 +5,16 @@ import {AppRoutingModule} from './app-routing.module'
 import {AppComponent} from './app.component'
 import {FormsModule} from '@angular/forms' // <-- NgModel lives here
 import {HeroesComponent} from './heroes/heroes.component'
-import {HeroDetailComponent} from './hero-detail/hero-detail.component';
-import { MessagesComponent } from './messages/messages.component'
+import {HeroDetailComponent} from './hero-detail/hero-detail.component'
+import {MessagesComponent} from './messages/messages.component'
 
 @NgModule({
     // AppModule declares both application components, AppComponent and HeroesComponent
-    declarations: [
+    declarations: [ // Every component must be declared in exactly one NgModule
         AppComponent,
         HeroesComponent,
         HeroDetailComponent,
-        MessagesComponent // Every component must be declared in exactly one NgModule
+        MessagesComponent
     ],
     imports: [
         BrowserModule,
