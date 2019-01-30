@@ -7,7 +7,9 @@ rules:
   comment-format:
     - true
     - check-space
-  curly: true
+  curly:
+    - true
+    - ignore-same-line
   deprecation:
     severity: warn
   eofline: true

@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core'
 import {Hero} from '../hero'
-import {HEROES} from '../mock-heroes'
+import {HeroService} from '../hero.service'
 
 // @Component is a decorator function that specifies the Angular metadata for the component
 @Component({
@@ -11,19 +11,24 @@ import {HEROES} from '../mock-heroes'
 
 export class HeroesComponent implements OnInit { // Always export the component class so you can import it elsewhere
 
-    heroes = HEROES
+    heroes: Hero[]
     selectedHero: Hero
 
     // Angular calls ngOnInit shortly after creating a component
 
-    constructor() {
+    constructor(private heroService: HeroService) {
     }
 
     // It's a good place to put initialization logic
     ngOnInit() {
+        this.getHeroes()
     }
 
     onSelect(hero: Hero) {
         this.selectedHero = hero
+    }
+
+    private getHeroes() {
+        this.heroes = this.heroService.getHeroes()
     }
 }
