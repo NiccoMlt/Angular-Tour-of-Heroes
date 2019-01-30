@@ -10,7 +10,7 @@ trim_trailing_whitespace = true
 max_line_length = 140
 
 # Applies only to JSON files
-[{*.js,*.json}]
+[{*.js, *.json, *.yaml, *.yml}]
 indent_size = 2
 
 [*.md]
@@ -19,10 +19,7 @@ trim_trailing_whitespace = false
 
 # Guidelines from https://sass-guidelin.es/#syntax--formatting
 #            and https://cssguidelin.es/#syntax-and-formatting
-[{*.sass,*.css}]
+[{*.sass, *.css}]
 indent_size = 2
 max_line_length = 80
-
-[{package.json,.travis.yml,.gitlab-ci.yml}]
-indent_size = 2
 
