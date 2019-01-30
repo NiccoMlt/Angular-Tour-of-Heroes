@@ -1,11 +1,23 @@
 import {NgModule} from '@angular/core'
 import {CommonModule} from '@angular/common'
+import {RouterModule, Routes} from '@angular/router'
+import {HeroesComponent} from './heroes/heroes.component'
+
+const routes: Routes = [
+    {path: 'heroes', component: HeroesComponent}
+]
 
 @NgModule({
     imports: [
-        CommonModule
-    ]// , // You generally don't declare components in a routing module
+        CommonModule,
+        RouterModule.forRoot(routes)
+    ],
+    exports: [
+        RouterModule
+    ]
+    // You generally don't declare components in a routing module
     // declarations: []
 })
+
 export class AppRoutingModule {
 }
