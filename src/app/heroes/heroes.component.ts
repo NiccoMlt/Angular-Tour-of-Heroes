@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core'
+import {Hero} from '../hero'
 
 // @Component is a decorator function that specifies the Angular metadata for the component
 @Component({
@@ -9,7 +10,10 @@ import {Component, OnInit} from '@angular/core'
 
 export class HeroesComponent implements OnInit { // Always export the component class so you can import it elsewhere
 
-    hero = 'Windstorm'
+    hero: Hero = {
+        id: 1,
+        name: 'Windstorm'
+    }
 
     constructor() {
     }
