@@ -12,7 +12,7 @@ import {HeroService} from '../hero.service'
 export class HeroesComponent implements OnInit { // Always export the component class so you can import it elsewhere
 
     heroes: Hero[]
-    selectedHero: Hero
+    // selectedHero: Hero // (unused)
 
     // Angular calls ngOnInit shortly after creating a component
 
@@ -24,9 +24,10 @@ export class HeroesComponent implements OnInit { // Always export the component 
         this.getHeroes()
     }
 
-    onSelect(hero: Hero) {
-        this.selectedHero = hero
-    }
+    // (unused)
+    // onSelect(hero: Hero) {
+    //     this.selectedHero = hero
+    // }
 
     private getHeroes() {
         this.heroService
