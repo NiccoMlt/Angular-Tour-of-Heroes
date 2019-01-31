@@ -1,0 +1,39 @@
+dist: trusty
+sudo: required
+
+language: node_js
+node_js:
+  - "11"
+
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
+
+branches:
+  only:
+    - master
+
+cache:
+  directories:
+    - ./node_modules
+
+install:
+  - npm install
+
+before_script:
+  - npm install -g @angular/cli
+
+script:
+  - ng lint
+  - ng build --prod --base-href https://niccomlt.github.io/Angular-Tour-of-Heroes/
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/my-app
+  on:
+    branch: master
